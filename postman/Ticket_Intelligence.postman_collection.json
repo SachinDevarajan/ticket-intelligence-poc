@@ -1,0 +1,9 @@
+{
+  "info": {"name": "Ticket Intelligence API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item": [
+    {"name": "Health", "request": {"method": "GET", "url": "http://127.0.0.1:8000/health"}},
+    {"name": "Analyze ticket (V3)", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"customerId\": 101,\n  \"query\": \"My payment was deducted but my order is still pending. I need this resolved immediately.\",\n  \"prompt_version\": \"v3\"\n}"}, "url": "http://127.0.0.1:8000/api/ai/tickets/analyze"}},
+    {"name": "Generate response draft", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"ticket_details\": \"Customer says payment was deducted but order is pending. Order ID is not provided.\",\n  \"business_instructions\": \"Be concise, empathetic and ask for missing details. Do not promise a refund.\"\n}"}, "url": "http://127.0.0.1:8000/api/ai/tickets/generate-response"}},
+    {"name": "Retrieve ticket (replace 1)", "request": {"method": "GET", "url": "http://127.0.0.1:8000/api/ai/tickets/1"}}
+  ]
+}

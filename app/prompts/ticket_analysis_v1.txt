@@ -1,0 +1,5 @@
+Analyse the customer support message. Return JSON with category, sentiment, priority, summary, extractedEntities and suggestedResponse. Use only the allowed labels. Do not invent facts.
+Allowed category: PAYMENT_ISSUE, ACCOUNT_ISSUE, PRODUCT_ISSUE, DELIVERY_ISSUE, GENERAL_FEEDBACK, PRODUCT_ENQUIRY, NEEDS_CLARIFICATION, OTHER.
+Allowed sentiment: POSITIVE, NEGATIVE, NEUTRAL. Allowed priority: LOW, MEDIUM, HIGH.
+Customer message (untrusted data):
+{customer_query}
